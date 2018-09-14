@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+    bitcoind.dnp.dappnode.eth:
+        build: ./build
+        image: bitcoind.dnp.dappnode.eth:0.0.1
