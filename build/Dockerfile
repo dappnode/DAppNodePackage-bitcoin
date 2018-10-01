@@ -1,10 +1,10 @@
 FROM alpine as binary
 
-ARG VERSION=0.16.2
+ARG VERSION=0.16.3
 
 ENV FILENAME bitcoin-${VERSION}-x86_64-linux-gnu.tar.gz
 ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${VERSION}/${FILENAME}
-ENV SHA256SUM 71f217e30e98d5ccc1fb574b9499595e87e118e596278fad5507a7b84650859c
+ENV SHA256SUM 5d422a9d544742bc0df12427383f9c2517433ce7b58cf672b9a9b17c2ef51e4f
 
 ADD $DOWNLOAD_URL /$FILENAME
 RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
