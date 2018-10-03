@@ -6,7 +6,7 @@
   "type": "service",
   "image": {
     "path": "bitcoind.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/QmdC17KBsJHFH84MHh83Zs6tVVQcgoJZWo9j2J9b6qgvig",
+    "hash": "/ipfs/QmbVXJBXaZ8eNpFktRj3oaxfGVZtV5vrvc9J5STBieB6mA",
     "size": "8480888",
     "ports": [
       "8332:8332",
