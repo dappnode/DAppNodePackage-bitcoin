@@ -9,7 +9,6 @@
     "hash": "/ipfs/QmSbPn1fVT3PxCFJEw3x6KthBX1MduyZDgMJv73Ma92j73",
     "size": "8480888",
     "ports": [
-      "8332:8332",
       "8333:8333"
     ],
     "volumes": [
