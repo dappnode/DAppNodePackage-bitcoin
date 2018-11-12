@@ -22,8 +22,8 @@ if [ ! -e "${BITCOIN_CONF}" ]; then
 server=1
 
 # You must set rpcuser and rpcpassword to secure the JSON-RPC api
-rpcuser=${BTC_RPCUSER:-btc}
-rpcpassword=${BTC_RPCPASSWORD:-changemeplz}
+rpcuser=${BTC_RPCUSER:-dappnode}
+rpcpassword=${BTC_RPCPASSWORD:-dappnode}
 
 # How many seconds bitcoin will wait for a complete RPC HTTP request.
 # after the HTTP connection is established.
