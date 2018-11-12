@@ -29,7 +29,8 @@ rpcpassword=${BTC_RPCPASSWORD:-dappnode}
 # after the HTTP connection is established.
 rpcclienttimeout=${BTC_RPCCLIENTTIMEOUT:-30}
 
-rpcallowip=${BTC_RPCALLOWIP:-::/0}
+# Allow only internal connections
+rpcallowip=${BTC_RPCALLOWIP:-172.33.0.0/16}
 
 # Listen for RPC connections on this TCP port:
 rpcport=${BTC_RPCPORT:-8332}
