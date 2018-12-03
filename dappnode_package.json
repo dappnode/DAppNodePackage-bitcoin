@@ -1,40 +1,43 @@
 {
-  "name": "bitcoind.dnp.dappnode.eth",
-  "version": "0.0.1",
-  "description": "The bicoin daemon (development package)",
+  "name": "bitcoin.dnp.dappnode.eth",
+  "version": "0.1.0",
+  "description": "The bitcoin daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
   "avatar": "/ipfs/QmWwNmBfs5e9PogW2BMEnMoH1BLF3Yddde3EvgpF3s1toT",
   "type": "service",
   "image": {
-    "path": "bitcoind.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/QmSbPn1fVT3PxCFJEw3x6KthBX1MduyZDgMJv73Ma92j73",
-    "size": "8480888",
+    "path": "",
+    "hash": "",
+    "size": "",
     "ports": [
       "8333:8333"
     ],
     "volumes": [
-      "bitcoind_data:/root/.bitcoin"
+      "bitcoin_data:/root/.bitcoin"
     ],
     "environment": [
-      "BTC_RPCUSER",
-      "BTC_RPCPASSWORD",
+      "BTC_RPCUSER=dappnode",
+      "BTC_RPCPASSWORD=dappnode",
       "BTC_TXINDEX=1"
     ]
   },
-  "author": "Abel Boldú (@vdo)",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "Abel Boldú (@vdo)",
+    "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
+  ],
   "keywords": [
     "bitcoin",
     "btc"
   ],
   "homepage": {
-    "homepage": "https://bitcoin.org/"
+    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/dappnode/DAppNodePackage-bitcoin.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/dappnode/DAppNodePackage-bitcoin/issues"
   },
-  "license": "GPL-3.0",
-  "dependencies": {}
+  "license": "GPL-3.0"
 }
