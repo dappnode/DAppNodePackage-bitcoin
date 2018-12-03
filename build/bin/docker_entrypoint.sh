@@ -8,8 +8,8 @@ BITCOIN_CONF=${BITCOIN_DIR}/bitcoin.conf
 # If config doesn't exist, initialize with sane defaults for running a
 # non-mining node.
 
-if [ ! -e "${BITCOIN_CONF}" ]; then
-  tee -a >${BITCOIN_CONF} <<EOF
+#if [ ! -e "${BITCOIN_CONF}" ]; then
+tee -a >${BITCOIN_CONF} <<EOF
 
 # For documentation on the config file, see
 #
@@ -53,7 +53,7 @@ zmqpubhashtx=${BTC_ZMQPUBHASHTX:-tcp://0.0.0.0:28333}
 zmqpubhashblock=${BTC_ZMQPUBHASHBLOCK:-tcp://0.0.0.0:28333}
 
 EOF
-fi
+#fi
 
 if [ $# -eq 0 ]; then
   exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF}
