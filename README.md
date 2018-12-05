@@ -5,6 +5,8 @@
 
 This package makes it easy to deploy a [bitcoin](https://bitcoin.org) node in a DAppNode, for this purpose the [bitcoind](https://bitcoin.org/es/descargar) daemon is used.
 
+<p align="center"><img src="./img/install.gif?raw=true"/></p>
+
 ## Prerequisites
 
 - git
