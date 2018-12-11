@@ -1,4 +1,4 @@
-# Bitcoin DAppnode package
+# Bitcoin DAppNode package
 
 [![DAppNodeStore Available](https://img.shields.io/badge/DAppNodeStore-Available-brightgreen.svg)](http://my.admin.dnp.dappnode.eth/#/installer/bitcoin.dnp.dappnode.eth)
 
