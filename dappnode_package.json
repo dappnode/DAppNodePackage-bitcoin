@@ -1,7 +1,7 @@
 {
   "name": "bitcoinprune.dnp.dappnode.eth",
   "version": "0.1.0",
-  "description": "The bitcoin daemon configured with prune option. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
+  "description": "The bitcoin daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
   "avatar": "/ipfs/QmWwNmBfs5e9PogW2BMEnMoH1BLF3Yddde3EvgpF3s1toT",
   "type": "service",
   "image": {
@@ -12,13 +12,13 @@
       "8333:8333"
     ],
     "volumes": [
-      "bitcoin_data:/root/.bitcoinprune"
+      "bitcoin_data:/root/.bitcoin"
     ],
     "environment": [
       "BTC_RPCUSER=dappnode",
       "BTC_RPCPASSWORD=dappnode",
-      "BTC_TXINDEX=0",
-      "BTC_PRUNE=550"
+      "BTC_TXINDEX=1",
+      "BTC_PRUNE=0"
     ]
   },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",

@@ -20,7 +20,7 @@ This package makes it easy to deploy a [bitcoin](https://bitcoin.org) node in a 
 - docker-compose
 
    Install [docker-compose](https://docs.docker.com/compose/install)
-   
+
 **Note**: Make sure you can run `git`, `docker ps`, `docker-compose` without any issue and without sudo command.
 
 
@@ -51,8 +51,10 @@ You can edit the `docker-compose.yml` and add extra options, such as:
 | BTC_RPCUSER | dappnode |
 | BTC_RPCPASSWORD | dappnode |
 | BTC_TXINDEX | 0 |
+| BTC_PRUNE | 0 |
 
-by default BTC_TXINDEX is 0, but the installation of the DAppNodePackage will set this value to 1, since it's a recommended value for other applications.
+by default BTC_TXINDEX is 0, but the installation of the DAppNodePackage will set this value to 1, since it's a recommended value for other applications. BTC_PRUNE is 0 by default. Enable blockchain prunning by setting it to a
+value larger than 550 (550Mb) , for example BTC_PRUNE=30000 to maintain only 30Gb of full blockchain data.
 ```
 
 ## License
