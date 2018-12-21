@@ -10,7 +10,7 @@ services:
         environment:
             - "BTC_RPCUSER=dappnode"
             - "BTC_RPCPASSWORD=dappnode"
-            - "BTC_TXINDEX=1"
-            - "BTC_PRUNE=0"
+            - "BTC_TXINDEX=0"
+            - "BTC_PRUNE=550"
 volumes:
     bitcoin_data: {}
