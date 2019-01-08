@@ -1,4 +1,4 @@
-# Bitcoin DAppnode package
+# Bitcoin DAppNode package
 
 [![DAppNodeStore Available](https://img.shields.io/badge/DAppNodeStore-Available-brightgreen.svg)](http://my.admin.dnp.dappnode.eth/#/installer/bitcoin.dnp.dappnode.eth)
 
@@ -54,6 +54,10 @@ You can edit the `docker-compose.yml` and add extra options, such as:
 
 by default BTC_TXINDEX is 0, but the installation of the DAppNodePackage will set this value to 1, since it's a recommended value for other applications.
 ```
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
 
 ## Note
 
