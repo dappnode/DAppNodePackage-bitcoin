@@ -1,6 +1,6 @@
 FROM alpine as binary
 
-ARG VERSION=0.17.0.1
+ARG VERSION=0.17.1
 
 ENV FILENAME bitcoin-${VERSION}-x86_64-linux-gnu.tar.gz
 ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${VERSION}/${FILENAME}
