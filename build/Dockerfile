@@ -4,7 +4,7 @@ ARG VERSION=0.17.1
 
 ENV FILENAME bitcoin-${VERSION}-x86_64-linux-gnu.tar.gz
 ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${VERSION}/${FILENAME}
-ENV SHA256SUM 6ccc675ee91522eee5785457e922d8a155e4eb7d5524bd130eb0ef0f0c4a6008
+ENV SHA256SUM 53ffca45809127c9ba33ce0080558634101ec49de5224b2998c489b6d0fc2b17
 
 ADD $DOWNLOAD_URL /$FILENAME
 RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
@@ -13,7 +13,7 @@ RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ];
       exit 1; \
     else \
       tar xzvf /$FILENAME; \
-      mv /bitcoin-${VERSION::-2} /bitcoin; \
+      mv /bitcoin-${VERSION} /bitcoin; \
     fi
 
 FROM alpine AS final
