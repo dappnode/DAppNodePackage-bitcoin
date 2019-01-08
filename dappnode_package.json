@@ -17,13 +17,15 @@
     "environment": [
       "BTC_RPCUSER=dappnode",
       "BTC_RPCPASSWORD=dappnode",
-      "BTC_TXINDEX=1"
+      "BTC_TXINDEX=1",
+      "BTC_PRUNE=0"
     ]
   },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
     "Abel Boldú (@vdo)",
-    "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)"
+    "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
+    "Loco del Bitcoin <ellocodelbitcoin@gmail.com>"
   ],
   "keywords": [
     "bitcoin",

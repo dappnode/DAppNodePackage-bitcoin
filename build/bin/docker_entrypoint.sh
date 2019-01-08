@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+btc_prune=${BTC_PRUNE:-0}
+if [ $btc_prune -ne 0 ] ; then
+    BTC_TXINDEX=0
+fi
+
 BITCOIN_DIR=/root/.bitcoin
 BITCOIN_CONF=${BITCOIN_DIR}/bitcoin.conf
 
@@ -45,6 +50,7 @@ disablewallet=${BTC_DISABLEWALLET:-1}
 # Enable an on-disk txn index. Allows use of getrawtransaction for txns not in
 # mempool.
 txindex=${BTC_TXINDEX:-0}
+prune=${BTC_PRUNE:-0}
 testnet=${BTC_TESTNET:-0}
 dbcache=${BTC_DBCACHE:-512}
 zmqpubrawblock=${BTC_ZMQPUBRAWBLOCK:-tcp://0.0.0.0:28332}

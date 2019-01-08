@@ -11,5 +11,6 @@ services:
             - "BTC_RPCUSER=dappnode"
             - "BTC_RPCPASSWORD=dappnode"
             - "BTC_TXINDEX=1"
+            - "BTC_PRUNE=0"
 volumes:
     bitcoin_data: {}
