@@ -24,7 +24,7 @@ This package makes it easy to deploy a [bitcoin](https://bitcoin.org) node in a 
 **Note**: Make sure you can run `git`, `docker ps`, `docker-compose` without any issue and without sudo command.
 
 
-## Buidling
+## Building
 
 `docker-compose build`
 
@@ -42,7 +42,7 @@ This package makes it easy to deploy a [bitcoin](https://bitcoin.org) node in a 
 
 `docker-compose down`
 
-## Environmet variables
+## Environment variables
 
 You can edit the `docker-compose.yml` and add extra options, such as:
 ```
