@@ -1,10 +1,10 @@
 FROM alpine as binary
 
-ARG VERSION=0.17.1
+ARG VERSION=0.18.0
 
 ENV FILENAME bitcoin-${VERSION}-x86_64-linux-gnu.tar.gz
 ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${VERSION}/${FILENAME}
-ENV SHA256SUM 53ffca45809127c9ba33ce0080558634101ec49de5224b2998c489b6d0fc2b17
+ENV SHA256SUM 5146ac5310133fbb01439666131588006543ab5364435b748ddfc95a8cb8d63f
 
 ADD $DOWNLOAD_URL /$FILENAME
 RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
@@ -18,7 +18,7 @@ RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ];
 
 FROM alpine AS final
 
-ARG GLIBC_VERSION=2.28-r0
+ARG GLIBC_VERSION=2.29-r0
 
 RUN apk update \
   && apk --no-cache add wget bash ca-certificates \

@@ -1,7 +1,7 @@
 {
   "name": "bitcoin.dnp.dappnode.eth",
-  "version": "0.1.0",
-  "description": "The bitcoin daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
+  "version": "0.1.2",
+  "description": "The Bitcoin Core daemon (0.18.0). Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
   "avatar": "/ipfs/QmWwNmBfs5e9PogW2BMEnMoH1BLF3Yddde3EvgpF3s1toT",
   "type": "service",
   "image": {
