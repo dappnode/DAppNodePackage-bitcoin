@@ -4,6 +4,7 @@
   "description": "The Bitcoin Core daemon (0.18.0). Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
   "avatar": "/ipfs/QmWwNmBfs5e9PogW2BMEnMoH1BLF3Yddde3EvgpF3s1toT",
   "type": "service",
+  "chain": "bitcoin",
   "image": {
     "path": "",
     "hash": "",
