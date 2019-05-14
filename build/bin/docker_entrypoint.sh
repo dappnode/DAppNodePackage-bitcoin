@@ -27,6 +27,7 @@ tee -a >${BITCOIN_CONF} <<EOF
 server=1
 
 # You must set rpcuser and rpcpassword to secure the JSON-RPC api
+rpcbind=0.0.0.0
 rpcuser=${BTC_RPCUSER:-dappnode}
 rpcpassword=${BTC_RPCPASSWORD:-dappnode}
 
@@ -62,7 +63,7 @@ EOF
 #fi
 
 if [ $# -eq 0 ]; then
-  exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF}
+    exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF}
 else
-  exec "$@"
+    exec "$@"
 fi
