@@ -10,6 +10,7 @@
     "path": "",
     "hash": "",
     "size": "",
+    "restart": "always",
     "ports": [
       "8333:8333"
     ],
