@@ -1,6 +1,6 @@
 {
   "name": "bitcoin.dnp.dappnode.eth",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "upstreamVersion": "0.20.0",
   "shortDescription": "Support the Bitcoin network, run your own node",
   "description": "The Bitcoin Core daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
@@ -12,8 +12,13 @@
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Loco del Bitcoin <ellocodelbitcoin@gmail.com>"
   ],
-  "categories": ["Blockchain"],
-  "keywords": ["bitcoin", "btc"],
+  "categories": [
+    "Blockchain"
+  ],
+  "keywords": [
+    "bitcoin",
+    "btc"
+  ],
   "links": {
     "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme"
   },
