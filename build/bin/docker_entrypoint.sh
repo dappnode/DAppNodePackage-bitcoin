@@ -3,7 +3,7 @@
 set -euo pipefail
 
 btc_prune=${BTC_PRUNE:-0}
-if [ $btc_prune -ne 0 ] ; then
+if [ $btc_prune -ne 0 ]; then
     BTC_TXINDEX=0
 fi
 
@@ -14,6 +14,7 @@ BITCOIN_CONF=${BITCOIN_DIR}/bitcoin.conf
 # non-mining node.
 
 #if [ ! -e "${BITCOIN_CONF}" ]; then
+mkdir -p ${BITCOIN_DIR}
 tee -a >${BITCOIN_CONF} <<EOF
 
 # For documentation on the config file, see
