@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   bitcoin.dnp.dappnode.eth:
-    image: 'bitcoin.dnp.dappnode.eth:0.1.6'
+    image: 'bitcoin.dnp.dappnode.eth:0.1.7'
     build: ./build
     volumes:
       - 'bitcoin_data:/root/.bitcoin'
