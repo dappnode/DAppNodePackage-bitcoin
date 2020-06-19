@@ -6,5 +6,14 @@
       "dappnode": "Mon, 25 Nov 2019 16:12:52 GMT"
     },
     "link": "http://my.dappnode/#/sdk/publish/r=bitcoin.dnp.dappnode.eth&v=0.1.5&h=%2Fipfs%2FQmWzNqeGK7BZ2L3J5yeA6FmTPscuub2qYiWKoQo4ia8ZVJ"
+  },
+  "0.1.6": {
+    "hash": "/ipfs/QmSwoXAJBbizY5jkw3GgnFkRsrsfnytT1UGsVSygv5gY3K",
+    "type": "directory",
+    "uploadedTo": {
+      "dappnode": "Fri, 19 Jun 2020 06:50:24 GMT",
+      "remote": "Fri, 19 Jun 2020 06:55:53 GMT"
+    },
+    "link": "http://my.dappnode/#/sdk/publish/r=bitcoin.dnp.dappnode.eth&v=0.1.6&h=%2Fipfs%2FQmSwoXAJBbizY5jkw3GgnFkRsrsfnytT1UGsVSygv5gY3K"
   }
 }
