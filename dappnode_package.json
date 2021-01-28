@@ -11,14 +11,14 @@
         "Abel Boldú (@vdo)",
         "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
         "Loco del Bitcoin <ellocodelbitcoin@gmail.com>",
-        "Lanski (https://github.com/pol-lanski"
+        "Lanski (https://github.com/pol-lanski)"
     ],
     "categories": ["Blockchain"],
     "keywords": ["bitcoin", "btc"],
     "links": {
         "Bitcoin": "https://www.bitcoin.org/",
         "DAppNode Releases": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme",
-        "upstream releases": "https://github.com/bitcoin/bitcoin/releases/tag/v0.21.0"
+        "Upstream Releases": "https://github.com/bitcoin/bitcoin/releases/tag/v0.21.0"
     },
     "repository": {
         "type": "git",
