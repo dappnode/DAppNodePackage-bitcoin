@@ -1,17 +1,20 @@
-version: '3.4'
+version: "3.4"
 services:
   bitcoin.dnp.dappnode.eth:
-    image: 'bitcoin.dnp.dappnode.eth:0.1.6'
-    build: ./build
+    image: "bitcoin.dnp.dappnode.eth:0.1.7"
+    build:
+      context: build
+      args:
+        UPSTREAM_VERSION: 0.21.0
     volumes:
-      - 'bitcoin_data:/root/.bitcoin'
+      - "bitcoin_data:/root/.bitcoin"
     ports:
-      - '8333:8333'
+      - "8333:8333"
     environment:
       - BTC_RPCUSER=dappnode
       - BTC_RPCPASSWORD=dappnode
       - BTC_TXINDEX=1
       - BTC_PRUNE=0
-    restart: always
+    restart: unless-stopped
 volumes:
   bitcoin_data: {}

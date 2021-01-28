@@ -6,5 +6,17 @@
       "dappnode": "Mon, 25 Nov 2019 16:12:52 GMT"
     },
     "link": "http://my.dappnode/#/sdk/publish/r=bitcoin.dnp.dappnode.eth&v=0.1.5&h=%2Fipfs%2FQmWzNqeGK7BZ2L3J5yeA6FmTPscuub2qYiWKoQo4ia8ZVJ"
+  },
+  "0.1.6": {
+    "hash": "/ipfs/QmTmnDdQBeREd39bPZwVmys77k31UaoNqCSoogQEHhSR3g",
+    "uploadedTo": {
+      "dappnode": "Tue, 26 Jan 2021 21:43:37 GMT"
+    }
+  },
+  "0.1.7": {
+    "hash": "/ipfs/QmY2EPMa2bDd1ADEYiTnyEHmLJwXBPkoREaSTBb7Yed3G9",
+    "uploadedTo": {
+      "dappnode": "Thu, 28 Jan 2021 15:42:43 GMT"
+    }
   }
 }
