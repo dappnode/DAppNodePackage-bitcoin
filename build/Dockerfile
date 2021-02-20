@@ -1,9 +1,9 @@
 FROM debian:bullseye-slim as binary
 
-ARG VERSION=0.20.0
+ARG UPSTREAM_VERSION=0.20.0
 
-ENV FILENAME bitcoin-${VERSION}-x86_64-linux-gnu.tar.gz
-ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${VERSION}/${FILENAME}
+ENV FILENAME bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz
+ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${UPSTREAM_VERSION}/${FILENAME}
 ENV SHA256SUM 35ec10f87b6bc1e44fd9cd1157e5dfa483eaf14d7d9a9c274774539e7824c427
 
 ADD $DOWNLOAD_URL /$FILENAME
@@ -13,7 +13,7 @@ RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ];
   exit 1; \
   else \
   tar xzvf /$FILENAME; \
-  mv /bitcoin-${VERSION} /bitcoin; \
+  mv /bitcoin-${UPSTREAM_VERSION} /bitcoin; \
   fi
 
 FROM debian:bullseye-slim AS final
