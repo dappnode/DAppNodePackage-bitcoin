@@ -12,6 +12,7 @@ services:
       - BTC_RPCPASSWORD=dappnode
       - BTC_TXINDEX=1
       - BTC_PRUNE=0
+      - BTC_DISABLEWALLET=1
     restart: always
 volumes:
   bitcoin_data: {}

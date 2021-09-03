@@ -52,6 +52,7 @@ You can edit the `docker-compose.yml` and add extra options, such as:
 | BTC_RPCPASSWORD | dappnode |
 | BTC_TXINDEX | 0 |
 | BTC_PRUNE | 0 |
+| BTC_DISABLEWALLET | 1 |
 
 by default BTC_TXINDEX is 0, but the installation of the DAppNodePackage will set this value to 1, since it's a recommended value for other applications. BTC_PRUNE is 0 by default. Enable blockchain prunning by setting it to a
 value larger than 550 (550Mb) , for example BTC_PRUNE=30000 to maintain only 30Gb of full blockchain data.
