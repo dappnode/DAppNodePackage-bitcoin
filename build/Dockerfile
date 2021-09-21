@@ -1,19 +1,20 @@
 FROM debian:bullseye-slim as binary
 
-ARG VERSION=0.20.0
+ARG UPSTREAM_VERSION
 
-ENV FILENAME bitcoin-${VERSION}-x86_64-linux-gnu.tar.gz
-ENV DOWNLOAD_URL https://bitcoin.org/bin/bitcoin-core-${VERSION}/${FILENAME}
-ENV SHA256SUM 35ec10f87b6bc1e44fd9cd1157e5dfa483eaf14d7d9a9c274774539e7824c427
+ENV FILENAME bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz
+ENV DOWNLOAD_URL https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION}/${FILENAME}
 
-ADD $DOWNLOAD_URL /$FILENAME
-RUN if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
+RUN apt-get update && apt-get install curl -y
+RUN curl ${DOWNLOAD_URL} -o ${FILENAME}
+RUN SHA256SUM=$(curl https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION}/SHA256SUMS | grep ${FILENAME} | awk '{print $1}') && \
+  if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
   rm -f /$FILENAME; \
   echo "Checksum verification failed."; \
   exit 1; \
   else \
   tar xzvf /$FILENAME; \
-  mv /bitcoin-${VERSION} /bitcoin; \
+  mv /bitcoin-${UPSTREAM_VERSION} /bitcoin; \
   fi
 
 FROM debian:bullseye-slim AS final
