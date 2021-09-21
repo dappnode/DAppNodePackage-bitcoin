@@ -5,7 +5,7 @@ services:
     build:
       context: ./build
       args:
-        UPSTREAM_VERSION: "22.0"
+        UPSTREAM_VERSION: v22.0
     volumes:
       - "bitcoin_data:/root/.bitcoin"
     ports:
