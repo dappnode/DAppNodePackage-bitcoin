@@ -1,20 +1,23 @@
 FROM debian:bullseye-slim as binary
 
+# IMPORTANT!
+# Upstream version in github (https://github.com/bitcoin/bitcoin/releases) => v22.0
+# Upstream version in offical bitcoin releases website (https://bitcoincore.org/bin/bitcoin-core-22.0/) => 22.0
+# To fix this incongruation it is removed the first char from the env UPSTREA_VERSION to download the binary and
+# keep the CI in github to bumpo the version with the sdk bot
+
 ARG UPSTREAM_VERSION
 
-ENV FILENAME bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz
-ENV DOWNLOAD_URL https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION}/${FILENAME}
-
 RUN apt-get update && apt-get install curl -y
-RUN curl ${DOWNLOAD_URL} -o ${FILENAME}
-RUN SHA256SUM=$(curl https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION}/SHA256SUMS | grep ${FILENAME} | awk '{print $1}') && \
-  if [ x"$( sha256sum /${FILENAME} | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
-  rm -f /$FILENAME; \
+RUN curl https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION#?}/bitcoin-${UPSTREAM_VERSION#?}-x86_64-linux-gnu.tar.gz -o bitcoin-${UPSTREAM_VERSION#?}-x86_64-linux-gnu.tar.gz
+RUN SHA256SUM=$(curl https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION#?}/SHA256SUMS | grep bitcoin-${UPSTREAM_VERSION#?}-x86_64-linux-gnu.tar.gz | awk '{print $1}') && \
+  if [ x"$( sha256sum /bitcoin-${UPSTREAM_VERSION#?}-x86_64-linux-gnu.tar.gz | awk '{print $1}' )" != x"${SHA256SUM}" ]; then \
+  rm -f /; \
   echo "Checksum verification failed."; \
   exit 1; \
   else \
-  tar xzvf /$FILENAME; \
-  mv /bitcoin-${UPSTREAM_VERSION} /bitcoin; \
+  tar xzvf /bitcoin-${UPSTREAM_VERSION#?}-x86_64-linux-gnu.tar.gz; \
+  mv /bitcoin-${UPSTREAM_VERSION#?} /bitcoin; \
   fi
 
 FROM debian:bullseye-slim AS final
