@@ -1,6 +1,6 @@
 {
   "name": "bitcoin.dnp.dappnode.eth",
-  "version": "0.2.0",
+  "version": "0.1.6",
   "upstreamVersion": "v23.0",
   "upstreamRepo": "bitcoin/bitcoin",
   "upstreamArg": "UPSTREAM_VERSION",
