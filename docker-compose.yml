@@ -16,6 +16,7 @@ services:
       - BTC_TXINDEX=1
       - BTC_PRUNE=0
       - BTC_DISABLEWALLET=1
+      - BTC_RPCALLOWIP=172.33.0.0/16
     restart: always
 volumes:
   bitcoin_data: {}
