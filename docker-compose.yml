@@ -3,7 +3,7 @@ services:
   bitcoin.dnp.dappnode.eth:
     image: "bitcoin.dnp.dappnode.eth:0.1.6"
     build:
-      context: ./build
+      context: ./src
       args:
         UPSTREAM_VERSION: v23.0
     volumes:
