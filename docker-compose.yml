@@ -9,7 +9,7 @@ services:
     volumes:
       - "bitcoin_data:/root/.bitcoin"
     ports:
-      - "8333:8333"
+      - "8340:8340"
     environment:
       - BTC_RPCUSER=dappnode
       - BTC_RPCPASSWORD=dappnode
@@ -17,6 +17,7 @@ services:
       - BTC_PRUNE=0
       - BTC_DISABLEWALLET=1
       - BTC_RPCALLOWIP=172.33.0.0/16
+      - P2P_PORT=8340
     restart: always
 volumes:
   bitcoin_data: {}
