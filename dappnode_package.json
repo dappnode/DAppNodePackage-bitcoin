@@ -17,7 +17,7 @@
   "categories": ["Blockchain"],
   "keywords": ["bitcoin", "btc"],
   "links": {
-    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme"
+    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme",
     "endpoint": "http://bitcoin.dappnode:8332
   },
   "repository": {
