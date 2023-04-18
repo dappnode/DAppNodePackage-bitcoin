@@ -6,5 +6,11 @@
       "dappnode": "Mon, 25 Nov 2019 16:12:52 GMT"
     },
     "link": "http://my.dappnode/#/sdk/publish/r=bitcoin.dnp.dappnode.eth&v=0.1.5&h=%2Fipfs%2FQmWzNqeGK7BZ2L3J5yeA6FmTPscuub2qYiWKoQo4ia8ZVJ"
+  },
+  "0.1.6": {
+    "hash": "/ipfs/QmeEMRLybFr7DLVAhixsdRNjEE2TEFN9BJhnkQG5dyidP8",
+    "uploadedTo": {
+      "http://172.33.1.5:5001": "Tue, 18 Apr 2023 13:54:50 GMT"
+    }
   }
 }

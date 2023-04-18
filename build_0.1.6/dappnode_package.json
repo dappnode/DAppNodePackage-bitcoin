@@ -1,7 +1,7 @@
 {
   "name": "bitcoin.dnp.dappnode.eth",
   "version": "0.1.6",
-  "upstreamVersion": "v23.0",
+  "upstreamVersion": "24.0.1",
   "upstreamRepo": "bitcoin/bitcoin",
   "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Support the Bitcoin network, run your own node",
@@ -17,7 +17,9 @@
   "categories": ["Blockchain"],
   "keywords": ["bitcoin", "btc"],
   "links": {
-    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme"
+    "apiEngine": "http://bitcoin.dappnode:8332",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme",
+    "endpoint": "http://bitcoin.dappnode:8332"
   },
   "repository": {
     "type": "git",
