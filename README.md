@@ -49,6 +49,7 @@ You can edit the `docker-compose.yml` and add extra options, such as:
 | ---- | ------- |
 | BTC_RPCUSER | dappnode |
 | BTC_RPCPASSWORD | dappnode |
+| BTC_RPCPORT | 8332 |
 | BTC_TXINDEX | 0 |
 | BTC_PRUNE | 0 |
 | BTC_DISABLEWALLET | 1 |
