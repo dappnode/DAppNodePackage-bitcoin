@@ -17,6 +17,7 @@ services:
       - BTC_PRUNE=0
       - BTC_DISABLEWALLET=1
       - BTC_RPCALLOWIP=172.33.0.0/16
+      - BTC_RPCPORT=8333
       - P2P_PORT=8340
     restart: always
 volumes:
