@@ -4,6 +4,7 @@
   "upstreamVersion": "v26.2",
   "upstreamRepo": "bitcoin/bitcoin",
   "upstreamArg": "UPSTREAM_VERSION",
+  "architectures": ["linux/amd64", "linux/arm64"],
   "shortDescription": "Support the Bitcoin network, run your own node",
   "description": "The Bitcoin Core daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
   "type": "service",
