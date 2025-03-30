@@ -1,11 +1,11 @@
-version: "3.4"
+version: "3.5"
 services:
   bitcoin.dnp.dappnode.eth:
     image: bitcoin.dnp.dappnode.eth:0.1.6
     build:
       context: ./src
       args:
-        UPSTREAM_VERSION: v28.1
+        UPSTREAM_VERSION: 28.1
     volumes:
       - bitcoin_data:/root/.bitcoin
     ports:
@@ -16,8 +16,9 @@ services:
       - BTC_TXINDEX=1
       - BTC_PRUNE=0
       - BTC_DISABLEWALLET=1
+      - BTC_BINDRPC=0.0.0.0
       - BTC_RPCALLOWIP=172.33.0.0/16
-      - BTC_RPCPORT=8333
+      - BTC_RPCPORT=8332
       - P2P_PORT=8340
     restart: always
 volumes:
