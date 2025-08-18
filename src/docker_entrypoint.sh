@@ -64,7 +64,7 @@ EOF
 #fi
 
 if [ $# -eq 0 ]; then
-    exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF} -port={P2P_PORT}
+    exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF} -port=${P2P_PORT:-8333}
 else
     exec "$@"
 fi

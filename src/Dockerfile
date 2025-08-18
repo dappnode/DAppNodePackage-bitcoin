@@ -6,23 +6,28 @@ FROM debian:bullseye-slim as binary
 # To fix this incongruation it is removed the first char from the env UPSTREA_VERSION to download the binary and
 # keep the CI in github to bumpo the version with the sdk bot
 
-ARG UPSTREAM_VERSION
 
 RUN apt-get update && apt-get install curl -y
 
-RUN curl https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION}/bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz -o bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz
-
-RUN expected_256checksum=$(curl https://bitcoincore.org/bin/bitcoin-core-${UPSTREAM_VERSION}/SHA256SUMS | grep bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz | awk '{print $1}')  \
-  && if [ sha256sum /bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz | awk '{print $1}'  != "$expected_256checksum" ]; then \
-  tar xzvf /bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz; \
-  mv /bitcoin-${UPSTREAM_VERSION} /bitcoin; \
-  echo "Checksum verification failed."; \
-  else \
-  tar xzvf /bitcoin-${UPSTREAM_VERSION}-x86_64-linux-gnu.tar.gz; \
-  mv /bitcoin-${UPSTREAM_VERSION} /bitcoin; \
-  fi
-
-
+ARG UPSTREAM_VERSION
+ARG TARGETARCH
+# map Docker arch to Core tarball arch names + verify checksum and extract
+RUN set -eux; \
+  VERSION_NO_V="${UPSTREAM_VERSION#v}"; \
+  case "$TARGETARCH" in \
+  amd64)  CORE_ARCH="x86_64" ;; \
+  arm64)  CORE_ARCH="aarch64" ;; \
+  *) echo "Unsupported arch: $TARGETARCH" >&2; exit 1 ;; \
+  esac; \
+  BASE_URL="https://bitcoincore.org/bin/bitcoin-core-${VERSION_NO_V}"; \
+  TARBALL="bitcoin-${VERSION_NO_V}-${CORE_ARCH}-linux-gnu.tar.gz"; \
+  curl -fsSL "${BASE_URL}/${TARBALL}" -o /tmp/bitcoin.tar.gz; \
+  curl -fsSL "${BASE_URL}/SHA256SUMS" -o /tmp/SHA256SUMS; \
+  EXPECTED="$(grep " ${TARBALL}\$" /tmp/SHA256SUMS | awk '{print $1}')"; \
+  ACTUAL="$(sha256sum /tmp/bitcoin.tar.gz | awk '{print $1}')"; \
+  test -n "$EXPECTED"; \
+  [ "$EXPECTED" = "$ACTUAL" ] || { echo "SHA256 mismatch: expected=$EXPECTED actual=$ACTUAL" >&2; exit 1; }; \
+  mkdir -p /bitcoin && tar -xzf /tmp/bitcoin.tar.gz -C /bitcoin --strip-components=1
 
 FROM debian:bullseye-slim AS final
 
