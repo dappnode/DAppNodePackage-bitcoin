@@ -13,6 +13,7 @@ services:
     environment:
       - BTC_RPCUSER=dappnode
       - BTC_RPCPASSWORD=dappnode
+      - BTC_RPCPORT=8332
       - BTC_TXINDEX=1
       - BTC_PRUNE=0
       - BTC_DISABLEWALLET=1
