@@ -1,40 +1,40 @@
 {
-  "name": "bitcoin.dnp.dappnode.eth",
-  "version": "0.1.10",
-  "upstreamVersion": "v29.0",
-  "upstreamRepo": "bitcoin/bitcoin",
-  "upstreamArg": "UPSTREAM_VERSION",
-  "shortDescription": "Support the Bitcoin network, run your own node",
-  "description": "The Bitcoin Core daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
-  "type": "service",
   "architectures": [
     "linux/amd64",
     "linux/arm64"
   ],
-  "chain": "bitcoin",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-bitcoin/issues"
+  },
+  "categories": [
+    "Blockchain"
+  ],
+  "chain": "bitcoin",
   "contributors": [
     "Abel Boldú (@vdo)",
     "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
     "Loco del Bitcoin <ellocodelbitcoin@gmail.com>"
   ],
-  "categories": [
-    "Blockchain"
-  ],
+  "description": "The Bitcoin Core daemon. Bitcoind is a program that implements the Bitcoin protocol for remote procedure call (RPC) use.",
   "keywords": [
     "bitcoin",
     "btc"
   ],
+  "license": "GPL-3.0",
   "links": {
-    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme",
-    "endpoint": "http://bitcoin.dappnode:8332"
+    "endpoint": "http://bitcoin.dappnode:8332",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-bitcoin#readme"
   },
+  "name": "bitcoin.dnp.dappnode.eth",
   "repository": {
     "type": "git",
     "url": "https://github.com/dappnode/DAppNodePackage-bitcoin.git"
   },
-  "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-bitcoin/issues"
-  },
-  "license": "GPL-3.0"
+  "shortDescription": "Support the Bitcoin network, run your own node",
+  "type": "service",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "upstreamRepo": "bitcoin/bitcoin",
+  "upstreamVersion": "v31.0",
+  "version": "0.1.11"
 }
