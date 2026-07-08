@@ -35,6 +35,6 @@
   "type": "service",
   "upstreamArg": "UPSTREAM_VERSION",
   "upstreamRepo": "bitcoin/bitcoin",
-  "upstreamVersion": "v31.0",
-  "version": "0.1.11"
+  "upstreamVersion": "v31.1",
+  "version": "0.0.3"
 }
