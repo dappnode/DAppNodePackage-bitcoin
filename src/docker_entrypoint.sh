@@ -49,6 +49,9 @@ printtoconsole=${BTC_PRINTTOCONSOLE:-1}
 # We probably don't want a wallet.
 disablewallet=${BTC_DISABLEWALLET:-1}
 
+# Tor is not included in this package.
+listenonion=0
+
 # Enable an on-disk txn index. Allows use of getrawtransaction for txns not in
 # mempool.
 txindex=${BTC_TXINDEX:-0}
