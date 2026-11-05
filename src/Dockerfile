@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim as binary
+FROM debian:trixie-slim as binary
 
 # IMPORTANT!
 # Upstream version in github (https://github.com/bitcoin/bitcoin/releases) => v22.0
@@ -29,7 +29,7 @@ RUN set -eux; \
   [ "$EXPECTED" = "$ACTUAL" ] || { echo "SHA256 mismatch: expected=$EXPECTED actual=$ACTUAL" >&2; exit 1; }; \
   mkdir -p /bitcoin && tar -xzf /tmp/bitcoin.tar.gz -C /bitcoin --strip-components=1
 
-FROM debian:bullseye-slim AS final
+FROM debian:trixie-slim AS final
 
 EXPOSE 8332 8333 18332 18333 28332 28333
 
