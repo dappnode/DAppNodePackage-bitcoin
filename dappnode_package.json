@@ -33,8 +33,12 @@
   },
   "shortDescription": "Support the Bitcoin network, run your own node",
   "type": "service",
-  "upstreamArg": "UPSTREAM_VERSION",
-  "upstreamRepo": "bitcoin/bitcoin",
-  "upstreamVersion": "v32.1",
+  "upstream": [
+    {
+      "repo": "bitcoin/bitcoin",
+      "version": "v32.1",
+      "arg": "UPSTREAM_VERSION"
+    }
+  ],
   "version": "0.1.11"
 }
